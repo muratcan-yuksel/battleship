@@ -20,9 +20,15 @@ if (shipParts.indexOf(number) > -1){
     return "miss!"
 }
     }
+//if the shipParts are all spliced, the ship has sunk
+    const isSunk=()=>{
+        if (shipParts.length==0){
+            return true
+        }else {return false}
+    }
 
     
-return{shipParts,getLength, getCoordinate,getNumber,hit}    
+return{shipParts,getLength, getCoordinate,getNumber,hit, isSunk}    
 
 }
 
