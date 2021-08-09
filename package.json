@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/muratcan-yuksel/battleship#readme",
   "devDependencies": {
-    "webpack": "^5.47.1",
+    "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2"
   }
 }
