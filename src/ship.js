@@ -2,6 +2,7 @@
 const Ship= (length, coordinate, number)=>{
   const getLength= () => length;
   const getCoordinate= ()=> coordinate;
+  const getNumber=()=> number;
     let position=[];
     for( let i= coordinate; i< (coordinate + length); i++){
 position.push(i)
@@ -15,7 +16,7 @@ if (position.indexOf(number) > -1){
     }
 
     
-return{position,getLength, getCoordinate,hit}    
+return{position,getLength, getCoordinate,getNumber,hit}    
 
 }
 
