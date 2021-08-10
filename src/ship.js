@@ -9,7 +9,7 @@ const Ship= (length, coordinate, number)=>{
     for( let i= coordinate; i< (coordinate + length); i++){
 shipParts.push(i)
     }
-    //hit function takes the number and if the number is container withing the shipParts array, it deletes that index
+    //hit function takes the number and if the number is contained within the shipParts array, it deletes that index
     //i.e. destroys a part of the ship
    const hit= (number)=>{
 if (shipParts.indexOf(number) > -1){
