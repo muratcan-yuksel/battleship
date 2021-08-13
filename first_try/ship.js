@@ -1,11 +1,12 @@
 //create a ship factory function
-const Ship = (length) => {
+const Ship = (coordinate, length, number) => {
   const getLength = () => length;
-
+  const getCoordinate = () => coordinate;
+  const getNumber = () => number;
   //this is the array that represents from what part of the x axis the ship starts, and ends where
   let shipParts = [];
   //the following creates the shipParts array
-  for (let i = 0; i < length; i++) {
+  for (let i = coordinate; i < coordinate + length; i++) {
     shipParts.push(i);
   }
   //hit function takes the number and if the number is contained within the shipParts array, it deletes that index
@@ -28,7 +29,7 @@ const Ship = (length) => {
     }
   };
 
-  return { shipParts, getLength, hit, isSunk };
+  return { shipParts, getLength, getCoordinate, getNumber, hit, isSunk };
 };
 
 module.exports = Ship;
