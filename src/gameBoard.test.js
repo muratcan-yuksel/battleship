@@ -20,5 +20,5 @@ xtest("does ship1 also gets created with a length?", () => {
 
 test("can the user give coordinates to ships on board creation?", () => {
   const player = gameBoard(undefined, undefined, 1, 2);
-  expect(player.ship2.getCoordinate()).toEqual(9);
+  expect(player.ship2.getCoordinate()).toEqual(2);
 });
