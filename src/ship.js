@@ -8,14 +8,16 @@ const Ship = (length) => {
   for (let i = 0; i < length; i++) {
     shipParts.push(i);
   }
-  //hit function takes the number and if the number is contained within the shipParts array, it deletes that index
-  //i.e. destroys a part of the ship
+  //hit function takes the number and if the number is contained within the shipParts array, it replaces that index with the "hit" string
+  //i.e. markst hat part of the ship as "hit"
   const hit = (number) => {
     if (shipParts.indexOf(number) > -1) {
       let deleteHit = shipParts.indexOf(number);
-      shipParts.splice(deleteHit, 1);
+      shipParts.splice(deleteHit, 1, "hit");
+      console.log(shipParts);
       return "hit!";
     } else {
+      console.log(shipParts);
       return "miss!";
     }
   };
