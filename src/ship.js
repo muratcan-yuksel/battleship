@@ -12,8 +12,8 @@ const Ship = (length) => {
   //i.e. markst hat part of the ship as "hit"
   const hit = (number) => {
     if (shipParts.indexOf(number) > -1) {
-      let deleteHit = shipParts.indexOf(number);
-      shipParts.splice(deleteHit, 1, "hit");
+      let findIndex = shipParts.indexOf(number);
+      shipParts.splice(findIndex, 1, "hit");
       console.log(shipParts);
       return "hit!";
     } else {
