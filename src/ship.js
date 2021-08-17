@@ -20,6 +20,7 @@ const Ship = (length) => {
     }
   };
   //if the shipParts are all spliced, the ship has sunk
+  //what would happend if I passed shipparts as a parameter to the below function?
   const isSunk = () => {
     if (shipParts.length == 0) {
       return true;
