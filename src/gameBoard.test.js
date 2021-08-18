@@ -1,7 +1,7 @@
 const gameBoard = require("./gameBoard");
 const Ship = require("./ship");
 
-test("is game board created?", () => {
+xtest("is game board created?", () => {
   let player = gameBoard();
   expect(player).toEqual({
     board: [
@@ -19,7 +19,7 @@ test("is game board created?", () => {
   });
 });
 
-test("can I give coordinates while calling the ship factory?", () => {
+test("can I give (by creating) coordinates key/value pair while calling the ship factory?", () => {
   const player = gameBoard();
   player.ship1 = Ship(3);
   player.ship1.coordinates = { horizontal: 3, vertical: 2 };
@@ -57,3 +57,18 @@ test("when a ship avoids attack", () => {
   };
   expect(player.receiveAttack()).toEqual("of");
 });
+
+test("do ships get placed correctly?", () => {
+  const player1 = gameBoard();
+  // const ship1 = Ship(4);
+  player1.ship1 = Ship(3);
+
+  player1.placeShips(player1.ship1, player1.board[4][4]);
+  console.log(player1.board[4]);
+  console.log(player1.board[7]);
+  console.log(player1.board);
+});
+
+// test("can I slice?", ()=>{
+
+// })
